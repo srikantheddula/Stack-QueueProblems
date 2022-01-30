@@ -16,23 +16,41 @@ namespace StacksAndQueue
                 new_node.next = this.top;
             }
             this.top = new_node;
-            Console.WriteLine(" pushed into stack: "+ new_node.data);
+            Console.WriteLine(" pushed into stack: " + new_node.data);
         }
         public void Display()
-        {          
+        {
             Node temp = this.top;
             if (temp == null)
             {
-                Console.WriteLine("No data in stack");           
+                Console.WriteLine("No data in stack");
             }
             else
             {
                 while (temp != null)
                 {
-                    Console.WriteLine(temp.data+" ");
+                    Console.WriteLine(temp.data + " ");
                     temp = temp.next;
                 }
             }
+        }
+        public void Peek() 
+        {
+            if (this.top == null)
+            {
+                Console.WriteLine(" No element present to peek");
+                return;
+            }
+            Console.WriteLine(" Top Most Element : " + this.top.data);
+        }
+        public void Pop() 
+        {
+            if (this.top == null)
+            {
+                Console.WriteLine(" No element present to pop");
+                return;
+            }
+            Console.WriteLine(" {0} is deleted from the stack : ", this.top.data);
         }
     }
 }
