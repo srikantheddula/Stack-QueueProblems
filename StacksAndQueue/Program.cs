@@ -2,17 +2,15 @@
 
 namespace StacksAndQueue
 {
-    internal class Program
+    class Program
     {
         static void Main(string[] args)
         {
-            LinkedListStack linkedListStack = new LinkedListStack();
-            linkedListStack.Push(70);   
-            linkedListStack.Push(30);
-            linkedListStack.Push(56);
-            linkedListStack.Display();
-            linkedListStack.Peek();
-            linkedListStack.Pop();
+            LinkedListQueue queue = new LinkedListQueue();
+            queue.Enqueue(56);    // adding values to the Queue
+            queue.Enqueue(30);
+            queue.Enqueue(70);
+            queue.Display();
         }
     }
 }
